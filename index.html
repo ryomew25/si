@@ -74,13 +74,7 @@
 </style>
 
 </head>
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.regist er("service-worker.js");
-  }
-</script>
-
-  <body>
+<body>
 <div class="calculator">
   <input type="text" id="display" class="display" disabled>
 
@@ -126,8 +120,14 @@
   function clearDisplay() {
     document.getElementById("display").value = "";
   }
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
 </script>
 
 </body>
 </html>
+
 
