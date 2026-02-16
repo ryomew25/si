@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffb6c1">
 <meta charset="UTF-8">
 <title>Ryoの電卓</title>
 
@@ -72,8 +74,13 @@
 </style>
 
 </head>
-<body>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.regist er("service-worker.js");
+  }
+</script>
 
+  <body>
 <div class="calculator">
   <input type="text" id="display" class="display" disabled>
 
@@ -123,3 +130,4 @@
 
 </body>
 </html>
+
